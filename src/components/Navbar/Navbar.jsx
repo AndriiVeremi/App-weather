@@ -1,9 +1,14 @@
+import { ChangThema } from 'components/ChangThema/ChangThema';
 import { SearchInput } from 'components/SearchInput/SearchInput';
+import { BtnLocation } from 'components/BtnLocation/BtnLocation';
+import { Wrapper } from './Navbar.styled';
 
 export const Navbar = ({ onSubmit }) => {
   return (
-    <>
-      <SearchInput onSubmit={onSubmit}/>
-    </>
+    <Wrapper>
+      <ChangThema/>
+      <SearchInput onSubmit={onSubmit} />
+      <BtnLocation/>
+    </Wrapper>
   );
 };

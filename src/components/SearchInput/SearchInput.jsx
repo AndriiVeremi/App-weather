@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import { Forma, Button, Span, Input } from './SearchInput.styled';
+
 
 export class SearchInput extends Component {
   state = {
@@ -6,6 +8,7 @@ export class SearchInput extends Component {
   };
 
   handleChange = e => {
+    console.log(e.target.value)
     this.setState({ searchCity: e.target.value });
   };
 
@@ -17,11 +20,11 @@ export class SearchInput extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <button type="submit">
-            <span className="button-label">Search</span>
-          </button>
-          <input
+        <Forma onSubmit={this.handleSubmit}>
+          <Button type="submit">
+            <Span>Search</Span>
+          </Button>
+          <Input
             type="text"
             value={this.state.searchCity}
             onChange={this.handleChange}
@@ -29,7 +32,9 @@ export class SearchInput extends Component {
             autoFocus
             placeholder="Weather in your city"
           />
-        </form>
+        </Forma>
+
+        
       </div>
     );
   }
