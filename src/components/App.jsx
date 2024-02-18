@@ -1,16 +1,21 @@
-export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+import { Component } from 'react';
+import { Navbar } from './Navbar/Navbar';
+import {getWeather} from '../weatherAPI/weatherAPI'
+export class App extends Component {
+  state = {
+    city: '',
+  };
+
+  onSubmit = e => {
+    console.log(e);
+    getWeather(e, 2)
+  };
+
+  render() {
+    return (
+      <>
+        <Navbar onSubmit={this.onSubmit} />
+      </>
+    );
+  }
+}
