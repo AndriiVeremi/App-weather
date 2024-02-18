@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import { Forma, Button, Span, Input } from './SearchInput.styled';
 
-
 export class SearchInput extends Component {
   state = {
     searchCity: '',
@@ -11,10 +10,18 @@ export class SearchInput extends Component {
     this.setState({ searchCity: e.target.value });
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault()
-    this.props.onSubmit(this.state.searchCity);
+  handleSubmit = e => {
+    e.preventDefault();
+
+    if (this.state.searchCity !== '') {
+      this.props.onSubmit(this.state.searchCity);
+      this.resetInput()
+    }
   };
+
+  resetInput() {
+    this.setState({ searchCity: '' });
+  }
 
   render() {
     return (
@@ -32,8 +39,6 @@ export class SearchInput extends Component {
             placeholder="Weather in your city"
           />
         </Forma>
-
-        
       </div>
     );
   }

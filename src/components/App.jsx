@@ -13,10 +13,7 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    this.setState({ city: localStorage.getItem('Weather') || 'London' });
-    // if (localStorage.getItem('Weather')) {
-    //   this.setState({ city: localStorage.getItem('Weather') });
-    // }
+    this.setState({ city: localStorage.getItem('Weather') || 'warsaw' });
   }
 
   componentDidUpdate(_, prevState) {
@@ -28,6 +25,8 @@ export class App extends Component {
   onSubmit = city => {
     console.log(city);
     this.setState({ city });
+
+    localStorage.setItem('Weather', city);
   };
 
   handleSearchWeather = async () => {
