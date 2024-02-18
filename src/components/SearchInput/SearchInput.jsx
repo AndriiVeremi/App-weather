@@ -8,7 +8,6 @@ export class SearchInput extends Component {
   };
 
   handleChange = e => {
-    console.log(e.target.value)
     this.setState({ searchCity: e.target.value });
   };
 

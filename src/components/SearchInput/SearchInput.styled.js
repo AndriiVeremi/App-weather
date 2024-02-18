@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+const img = 'https://img.icons8.com/ios/50/search--v1.png';
 
 export const Forma = styled.form`
   display: flex;
@@ -16,7 +17,7 @@ export const Button = styled.button`
   height: 48px;
   border: 0;
   background-color: #333;
-  /* background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg'); */
+  background-image: url(${img});
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;

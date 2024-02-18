@@ -7,9 +7,19 @@ export class App extends Component {
     city: '',
   };
 
-  onSubmit = e => {
-    console.log('city', e);
-    getWeather(e);
+  componentDidMount() {
+    this.setState({ city: localStorage.getItem('Weather') || '' });
+  }
+
+  componentDidUpdate() {
+    
+  }
+
+
+  onSubmit = city => {
+    console.log(city);
+    this.setState({ city });
+    // localStorage.setItem('Weather', JSON.stringify(city));
   };
 
   render() {
