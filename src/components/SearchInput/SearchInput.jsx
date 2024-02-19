@@ -1,45 +1,40 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import { Forma, Button, Span, Input } from './SearchInput.styled';
 
-export class SearchInput extends Component {
-  state = {
-    searchCity: '',
+export const SearchInput = ({ onSubmit }) => {
+  const [searchCity, setSearchCity] = useState('');
+
+  const handleChange = e => {
+    setSearchCity(e.target.value);
   };
 
-  handleChange = e => {
-    this.setState({ searchCity: e.target.value });
-  };
-
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
-
-    if (this.state.searchCity !== '') {
-      this.props.onSubmit(this.state.searchCity);
-      this.resetInput()
+    if (searchCity !== '') {
+      onSubmit(searchCity);
+      resetInput();
     }
   };
 
-  resetInput() {
-    this.setState({ searchCity: '' });
-  }
+  const resetInput = () => {
+    setSearchCity('');
+  };
 
-  render() {
-    return (
-      <div>
-        <Forma onSubmit={this.handleSubmit}>
-          <Button type="submit">
-            <Span>Search</Span>
-          </Button>
-          <Input
-            type="text"
-            value={this.state.searchCity}
-            onChange={this.handleChange}
-            autoComplete="off"
-            autoFocus
-            placeholder="Weather in your city"
-          />
-        </Forma>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Forma onSubmit={handleSubmit}>
+        <Button type="submit">
+          <Span>Search</Span>
+        </Button>
+        <Input
+          type="text"
+          value={searchCity}
+          onChange={handleChange}
+          autoComplete="off"
+          autoFocus
+          placeholder="Weather in your city"
+        />
+      </Forma>
+    </div>
+  );
+};
