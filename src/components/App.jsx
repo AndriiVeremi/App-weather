@@ -15,7 +15,7 @@ export const App = () => {
 
     if (city === '') {
       return;
-    }
+    };
 
     const handleSearchWeather = async () => {
       try {
@@ -23,6 +23,7 @@ export const App = () => {
         const data = await getWeather(city);
         setWeather(data.data);
       } catch (error) {
+        console.log(error)
         setError(error);
       }
     };
@@ -31,7 +32,6 @@ export const App = () => {
   }, [city]);
 
   const onSubmit = city => {
-    console.log(city);
     setCity(city);
     localStorage.setItem('Weather', city);
   };
@@ -42,8 +42,9 @@ export const App = () => {
         <Navbar onSubmit={onSubmit} />
         <Body>
           <Time />
-          {weather.length !== 0 && <WeatherDey weathers={weather} />}
+          {weather.length !== 0 && !error && <WeatherDey weathers={weather} />}
         </Body>
+
       </Container>
     </>
   );
