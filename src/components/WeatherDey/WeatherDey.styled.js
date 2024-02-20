@@ -1,26 +1,51 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 
 export const Wrapper = styled.div`
  border: 1px solid #333;
  border-radius: 10px;
  padding: 50px;
  width: 500px;
- background-color: #b0b0b0;
+ background-color: #91dfff;
 
 `;
 
 export const NameCity = styled.h1`
-font-size: 35px;
+font-size: 60px;
+line-height: 1;
+color: #163355;
 `;
 
-export const Pressure = styled.div`
+export const Items = styled.div`
 display: flex;
 gap: 10px;
 `;
 
-// export const Wrapper = styled.div`
-//  border: 1px solid #333;
-//  border-radius: 10px;
-//  padding: 50px;
-//  width: 500px;
-// `;
+export const TempWrapper = styled.div`
+display: flex;
+gap: 30px;
+align-items: center;
+margin-bottom: 30px;
+`;
+
+export const FlexWrapper = styled.div`
+display: flex;
+flex-direction: column;
+line-height: 1;
+align-items: center;
+`;
+
+export const Temp = styled.span`
+font-size: 120px;
+font-weight: 700;
+`;
+
+export const TempFeel = styled.span`
+font-size: 30px;
+`;
+
+//----------------------------------
+
+export const OtherDesc = styled.div`
+display: flex;
+gap: 30px;
+`;
