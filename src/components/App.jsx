@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Navbar } from './Navbar/Navbar';
 import { Time } from './Time/Time';
 import { WeatherDey } from './WeatherDey/WeatherDey';
+import { WeatherWeeck } from './WeatherWeeck/WeatherWeeck';
 import { getWeather } from '../weatherAPI/weatherAPI';
 import { Container, Grid, Box } from '@mui/material';
 
@@ -44,6 +45,7 @@ export const App = () => {
       <Grid container spacing={2}>
         <Grid item xs={4}>
           <Box><Time /></Box>
+          <Box><WeatherWeeck weathers={weather}/></Box>
         </Grid>
         <Grid item xs={8}>
           <Box>{weather.length !== 0 && !error && <WeatherDey weathers={weather} />}</Box>

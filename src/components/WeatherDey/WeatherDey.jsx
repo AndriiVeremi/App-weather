@@ -16,7 +16,7 @@ import IconClear from '../../images/clear.png';
 export const WeatherDey = ({ weathers }) => {
   const { city, list } = weathers;
   const { main, weather, wind } = list[0];
-  console.log('list', list[0]);
+  
 
   return (
     <Wrapper>
