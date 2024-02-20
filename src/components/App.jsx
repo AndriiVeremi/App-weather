@@ -4,7 +4,7 @@ import { Time } from './Time/Time';
 import { WeatherDey } from './WeatherDey/WeatherDey';
 import { getWeather } from '../weatherAPI/weatherAPI';
 import { Container, Grid, Box } from '@mui/material';
-// import { Container } from './App.styled';
+
 
 export const App = () => {
   const [city, setCity] = useState('');
@@ -41,7 +41,7 @@ export const App = () => {
     <Container>
       <Navbar onSubmit={onSubmit} />
 
-      <Grid container spacing={1}>
+      <Grid container spacing={2}>
         <Grid item xs={4}>
           <Box><Time /></Box>
         </Grid>

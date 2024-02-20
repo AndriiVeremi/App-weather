@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+import { Wrapper, Times, Dates } from './Time.styled';
 
 
 export const Time = () => {
@@ -7,9 +8,9 @@ export const Time = () => {
   const data = format(new Date(), 'MMMM iiii yyyy');
 
   return (
-    <div>
-      <span>{time}</span>
-      <span>{data}</span>
-    </div>
+    <Wrapper>
+      <Times>{time}</Times>
+      <Dates>{data}</Dates>
+    </Wrapper>
   );
 };

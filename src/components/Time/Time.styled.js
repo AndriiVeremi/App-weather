@@ -1,14 +1,13 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const Wrapper = styled.div`
-  border: 1px solid #333;
+  border: 1px solid #2293ee;
   border-radius: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 300px;
-  height: 180px;
   padding: 50px;
+  background-color: #91dfff;
 `;
 
 export const Times = styled.span`
