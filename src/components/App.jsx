@@ -3,7 +3,8 @@ import { Navbar } from './Navbar/Navbar';
 import { Time } from './Time/Time';
 import { WeatherDey } from './WeatherDey/WeatherDey';
 import { getWeather } from '../weatherAPI/weatherAPI';
-import { Container, Body } from './App.styled';
+import { Container, Grid, Box } from '@mui/material';
+// import { Container } from './App.styled';
 
 export const App = () => {
   const [city, setCity] = useState('');
@@ -15,7 +16,7 @@ export const App = () => {
 
     if (city === '') {
       return;
-    };
+    }
 
     const handleSearchWeather = async () => {
       try {
@@ -23,7 +24,7 @@ export const App = () => {
         const data = await getWeather(city);
         setWeather(data.data);
       } catch (error) {
-        console.log(error)
+        console.log(error);
         setError(error);
       }
     };
@@ -37,15 +38,17 @@ export const App = () => {
   };
 
   return (
-    <>
-      <Container>
-        <Navbar onSubmit={onSubmit} />
-        <Body>
-          <Time />
-          {weather.length !== 0 && !error && <WeatherDey weathers={weather} />}
-        </Body>
+    <Container>
+      <Navbar onSubmit={onSubmit} />
 
-      </Container>
-    </>
+      <Grid container spacing={1}>
+        <Grid item xs={4}>
+          <Box><Time /></Box>
+        </Grid>
+        <Grid item xs={8}>
+          <Box>{weather.length !== 0 && !error && <WeatherDey weathers={weather} />}</Box>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };

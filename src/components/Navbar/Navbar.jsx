@@ -1,12 +1,12 @@
 import { SearchInput } from 'components/SearchInput/SearchInput';
 import { BtnLocation } from 'components/BtnLocation/BtnLocation';
-import { Wrapper } from './Navbar.styled';
+import { NavWrapper } from './Navbar.styled';
 
 export const Navbar = ({ onSubmit }) => {
   return (
-    <Wrapper>
+    <NavWrapper>
       <SearchInput onSubmit={onSubmit} />
-      <BtnLocation/>
-    </Wrapper>
+      <BtnLocation />
+    </NavWrapper>
   );
 };

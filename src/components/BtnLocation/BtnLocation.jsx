@@ -1,5 +1,5 @@
-import { Button } from "./BtnLocation.styled";
+import { Button } from "@mui/material";
 
 export const BtnLocation = () => {
-    return <Button>My location</Button>;
+    return <Button variant="contained">My location</Button>;
   };
