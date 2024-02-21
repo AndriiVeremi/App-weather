@@ -3,12 +3,12 @@ import { Navbar } from './Navbar/Navbar';
 import { Time } from './Time/Time';
 import { WeatherDey } from './WeatherDey/WeatherDey';
 import { WeatherWeeck } from './WeatherWeeck/WeatherWeeck';
-import { getWeather } from '../weatherAPI/weatherAPI';
+import { getWeather} from '../weatherAPI/weatherAPI';
 import { Container, Grid, Box } from '@mui/material';
 
 
 export const App = () => {
-  const [city, setCity] = useState('');
+  const [city, setCity] = useState('Warsaw');
   const [weather, setWeather] = useState([]);
   const [error, setError] = useState(null);
 

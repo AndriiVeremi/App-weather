@@ -1,18 +1,14 @@
-import { WeeckWrapper } from './WeatherWeeck.styled';
+// import { WeeckWrapper } from './WeatherWeeck.styled';
+import { WeatherWeeckItem } from "components/WeeckWrapperItem/WeeckWrapperItem";
+
 
 export const WeatherWeeck = ({ weathers }) => {
   const { list } = weathers;
-  console.log('list', list);
-  return (<WeeckWrapper>
-      {list.map(item => {
-        console.log(item);
-        return <li>console</li>;
-      })}
-      
-    </WeeckWrapper>
+ 
+  return (
+    <ul>
+      {list.map(item =>  <WeatherWeeckItem item={item}>asd</WeatherWeeckItem>)}
+    </ul>
   );
 };
 
-// item.map(element => {
-//     console.log(element);
-//   });

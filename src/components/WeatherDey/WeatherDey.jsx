@@ -16,6 +16,8 @@ import IconClear from '../../images/clear.png';
 export const WeatherDey = ({ weathers }) => {
   const { city, list } = weathers;
   const { main, weather, wind } = list[0];
+
+  // const { main, weather, wind } = weathers;
   
 
   return (
@@ -40,7 +42,6 @@ export const WeatherDey = ({ weathers }) => {
 
 
       <OtherDesc>
-
         <div>
           <Items>
             <img src={IconPressure} alt="Ppressure" />

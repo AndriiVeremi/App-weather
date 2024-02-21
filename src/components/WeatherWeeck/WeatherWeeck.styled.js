@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const WeeckWrapper = styled.ul`
+export const WeeckWrapper = styled.div`
   border: 1px solid #2293ee;
   border-radius: 10px;
   display: flex;
