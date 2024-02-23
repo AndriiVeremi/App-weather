@@ -11,6 +11,7 @@ export const App = () => {
   const [city, setCity] = useState('Warsaw');
   const [weather, setWeather] = useState([]);
   const [error, setError] = useState(null);
+  // const [weatherIcon, setWeatherIcon] = useState('')
 
   useEffect(() => {
     setCity(localStorage.getItem('Weather') || 'warsaw');

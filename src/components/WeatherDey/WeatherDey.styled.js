@@ -41,8 +41,6 @@ export const TempFeel = styled.span`
 font-size: 30px;
 `;
 
-//----------------------------------
-
 export const OtherDesc = styled.div`
 display: flex;
 gap: 30px;
