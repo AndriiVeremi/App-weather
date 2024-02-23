@@ -8,9 +8,11 @@ export const Wrapper = styled.div`
 `;
 
 export const NameCity = styled.h1`
-font-size: 60px;
+font-family: 'Montserrat';
+font-size: 80px;
 line-height: 1;
 color: #163355;
+margin: 0;
 `;
 
 export const Items = styled.div`
@@ -23,6 +25,8 @@ display: flex;
 gap: 30px;
 align-items: center;
 margin-bottom: 30px;
+justify-content: flex-end;
+margin-bottom: 40px;
 `;
 
 export const FlexWrapper = styled.div`
@@ -39,9 +43,21 @@ font-weight: 700;
 
 export const TempFeel = styled.span`
 font-size: 30px;
+margin: 0;
 `;
 
 export const OtherDesc = styled.div`
 display: flex;
 gap: 30px;
+`;
+
+export const TextDesc = styled.div`
+margin: 0;
+`;
+
+export const TextWrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-end;
 `;

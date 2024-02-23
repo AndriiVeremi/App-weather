@@ -7,38 +7,36 @@ import {
   TempFeel,
   TempWrapper,
   OtherDesc,
+  TextDesc,
+  TextWrapper,
 } from './WeatherDey.styled';
 
 import IconWind from '../../images/wind.png';
 import IconPressure from '../../images/pressure.png';
-import IconNavigation from '../../images/navigation.png';
-// import IconClear from '../../images/clear.png';
 
 export const WeatherDey = ({ weathers }) => {
-
   const { city, list } = weathers;
   const { main, weather, wind } = list[0];
 
   return (
     <Wrapper>
       <NameCity>{city.name}</NameCity>
-
       <TempWrapper>
-        <FlexWrapper>
-          <div>
-            <img
-              src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
-              style={{ height: '200px', width: '200px' }}
-              alt="icon"
-            />
-          </div>
-          <p>На дворі {weather[0].description}</p>
-        </FlexWrapper>
+
+        <TextWrapper>
+          <img
+            src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+            style={{ height: '150px', width: '150px' }}
+            alt="icon"
+          />
+          <TextDesc>{weather[0].description}</TextDesc>
+        </TextWrapper>
 
         <FlexWrapper>
           <Temp>{Math.round(main.temp)}°C</Temp>
           <TempFeel>Feels like:: {Math.round(main.feels_like)} °C</TempFeel>
         </FlexWrapper>
+
       </TempWrapper>
 
       <OtherDesc>
@@ -51,11 +49,6 @@ export const WeatherDey = ({ weathers }) => {
           <Items>
             <img src={IconWind} alt="Wind" />
             <p>Швидкість вітру {wind.speed}</p>
-          </Items>
-
-          <Items>
-            <img src={IconNavigation} alt="Windf" />
-            <p>Напрямок вітру {wind.deg}</p>
           </Items>
         </div>
 
