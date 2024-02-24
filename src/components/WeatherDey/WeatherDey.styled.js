@@ -19,6 +19,7 @@ margin-bottom: 30px;
 export const Items = styled.div`
 display: flex;
 gap: 10px;
+margin-bottom: 20px;
 `;
 
 export const TempWrapper = styled.div`
@@ -55,7 +56,7 @@ export const OtherDesc = styled.div`
 border-top: 1px solid #333;
 display: flex;
 gap: 30px;
-padding-top: 30px;
+padding-top: 50px;
 `;
 
 export const TextDesc = styled.div`

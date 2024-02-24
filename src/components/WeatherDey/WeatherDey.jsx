@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+import { List, ListItem } from '@mui/material';
 import {
   Wrapper,
   NameCity,
@@ -44,7 +45,7 @@ export const WeatherDey = ({ weathers }) => {
 
       <OtherDesc>
         <div>
-          <Items>
+        <Items>
             <img
               src={IconPressure}
               style={{ height: '25px', width: '25px' }}
@@ -53,21 +54,10 @@ export const WeatherDey = ({ weathers }) => {
             <Text>Pressure: {main.pressure}</Text>
           </Items>
 
-          <Items>
-            <img
-              src={IconWind}
-              style={{ height: '30px', width: '30px' }}
-              alt="Wind"
-            />
-            <Text>Wind speed: {wind.speed}</Text>
-          </Items>
-        </div>
-
-        <div>
         <Items>
         <img
               src={temp}
-              style={{ height: '30px', width: '30px' }}
+              style={{ height: '35px', width: '35px' }}
               alt="temp"
             />
           <Text>Temp Max: {Math.round(main.temp_max)} °C</Text>
@@ -76,7 +66,7 @@ export const WeatherDey = ({ weathers }) => {
         <Items>
         <img
               src={temp}
-              style={{ height: '30px', width: '30px' }}
+              style={{ height: '35px', width: '35px' }}
               alt="temp"
             />
         <Text>Temp Min: {Math.round(main.temp_min)} °C</Text>
@@ -85,10 +75,19 @@ export const WeatherDey = ({ weathers }) => {
         </div>
 
         <div>
+        <Items>
+            <img
+              src={IconWind}
+              style={{ height: '35px', width: '35px' }}
+              alt="Wind"
+            />
+            <Text>Wind speed: {wind.speed}</Text>
+          </Items>
+
           <Items>
             <img
               src={sunUp}
-              style={{ height: '30px', width: '30px' }}
+              style={{ height: '35px', width: '35px' }}
               alt="sunUp"
             />
             <Text>Sunrise: {format(new Date(sys.sunrise * 1000), 'HH:mm')} </Text>
