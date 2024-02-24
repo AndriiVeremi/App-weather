@@ -41,12 +41,14 @@ export const Temp = styled.span`
 font-family: 'Montserrat';
 font-size: 120px;
 font-weight: 700;
+color: #163355;
 `;
 
 export const TempFeel = styled.span`
 font-family: 'Montserrat';
 font-size: 24px;
 margin: 0;
+color: #163355;
 `;
 
 export const OtherDesc = styled.div`
@@ -58,11 +60,6 @@ export const TextDesc = styled.div`
 font-family: 'Montserrat';
 margin: 0;
 font-size: 30px;
+color: #163355;
 `;
 
-export const TextWrapper = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-end;
-`;

@@ -5,7 +5,7 @@ export const WeatherWeeckItem = ({ id, data, temp, wind, icon, desc }) => {
   return (
     <WeeckItem key={id}>
       <div>
-        <p>{format(new Date(data), 'dd EEEE hh:mm')}</p>
+        <p>{format(new Date(data), 'dd EEEE HH:mm')}</p>
       </div>
 
       <ItemImgWrapper>

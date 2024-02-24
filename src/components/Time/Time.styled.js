@@ -9,11 +9,13 @@ export const Wrapper = styled.div`
   padding: 20px;
   background-color: #91dfff;
   margin-bottom: 20px;
+  color: #163355;
 `;
 
 export const Times = styled.span`
   font-family: 'Montserrat';
   font-size: 35px;
+
 `;
 
 export const Dates = styled.span`
