@@ -2,9 +2,9 @@ import styled from '@emotion/styled'
 
 export const Wrapper = styled.div`
  border: 1px solid #2293ee;
- height: 500px;
+ height: 550px;
  border-radius: 10px;
- padding: 50px;
+ padding: 30px;
  background-color: #beebff;
 `;
 
@@ -13,7 +13,7 @@ font-family: 'Montserrat';
 font-size: 80px;
 line-height: 1;
 color: #163355;
-margin: 0;
+margin-bottom: 30px;
 `;
 
 export const Items = styled.div`
@@ -38,12 +38,14 @@ align-items: center;
 `;
 
 export const Temp = styled.span`
+font-family: 'Montserrat';
 font-size: 120px;
 font-weight: 700;
 `;
 
 export const TempFeel = styled.span`
-font-size: 30px;
+font-family: 'Montserrat';
+font-size: 24px;
 margin: 0;
 `;
 
@@ -53,7 +55,9 @@ gap: 30px;
 `;
 
 export const TextDesc = styled.div`
+font-family: 'Montserrat';
 margin: 0;
+font-size: 30px;
 `;
 
 export const TextWrapper = styled.div`

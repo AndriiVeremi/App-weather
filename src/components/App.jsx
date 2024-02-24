@@ -50,7 +50,7 @@ export const App = () => {
       <Navbar onSubmit={onSubmit} />
 
       <Grid container spacing={2}>
-        <Grid item xs={4}>
+        <Grid item xs={5}>
           <Box>
             <Time />
           </Box>
@@ -60,7 +60,7 @@ export const App = () => {
             )}
           </Box>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={7}>
           <Box>
             {weather.length !== 0 && !error && (
               <WeatherDey weathers={weather} />

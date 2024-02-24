@@ -19,22 +19,21 @@ export const WeatherDey = ({ weathers }) => {
   return (
     <Wrapper>
       <NameCity>{name}</NameCity>
-      <TempWrapper>
 
-        <TextWrapper>
-          <img
-            src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
-            style={{ height: '150px', width: '150px' }}
-            alt="icon"
-          />
-          <TextDesc>{weather[0].description}</TextDesc>
-        </TextWrapper>
+      <TempWrapper>
+        <TextDesc>{weather[0].description}</TextDesc>
+
+        <img
+          src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+          style={{ height: '150px', width: '150px' }}
+          alt="icon"
+        />
 
         <FlexWrapper>
           <Temp>{Math.round(main.temp)}°C</Temp>
-          <TempFeel>Feels like:: {Math.round(main.feels_like)} °C</TempFeel>
+          <TempFeel>Feels like: {Math.round(main.feels_like)} °C</TempFeel>
         </FlexWrapper>
-
+        
       </TempWrapper>
 
       <OtherDesc>

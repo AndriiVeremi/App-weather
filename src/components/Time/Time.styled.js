@@ -6,15 +6,17 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 50px;
+  padding: 20px;
   background-color: #91dfff;
   margin-bottom: 20px;
 `;
 
 export const Times = styled.span`
- font-size: 50px;
+  font-family: 'Montserrat';
+  font-size: 35px;
 `;
 
 export const Dates = styled.span`
-font-size: 25px;
+  font-family: 'Montserrat';
+  font-size: 50px;
 `;

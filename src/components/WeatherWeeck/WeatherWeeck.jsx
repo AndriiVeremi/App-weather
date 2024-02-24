@@ -6,13 +6,15 @@ export const WeatherWeeck = ({ weathers }) => {
     <WeathersListWrappre>
       <WeathersList>
       {weathers &&
-        weathers.map(item => {   
+        weathers.map(item => { 
+          // console.log(item)  
           return (
             <WeatherWeeckItem
               id={item.dt}
               data={item.dt_txt}
               temp={item.main.temp}
               wind={item.wind.speed}
+              desc={item.weather[0].description}
               icon={item.weather[0].icon}
             />
           );

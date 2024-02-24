@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const WeathersListWrappre = styled.div`
-  height: 330px;
+  height: 420px;
   overflow-x: hidden;
   overflow-y: scroll;
 
