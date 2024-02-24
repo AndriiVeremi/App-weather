@@ -18,3 +18,16 @@ display: flex;
 flex-direction: column;
 align-items: center;
 `;
+
+export const DataText = styled.p`
+font-family: 'Montserrat';
+font-size: 18px;
+display: flex;
+flex-direction: column;
+`;
+
+export const DataTextWrapper = styled.p`
+display: flex;
+flex-direction: column;
+align-items: center;
+`;

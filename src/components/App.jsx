@@ -3,7 +3,7 @@ import { Navbar } from './Navbar/Navbar';
 import { Time } from './Time/Time';
 import { WeatherDey } from './WeatherDey/WeatherDey';
 import { WeatherWeeck } from './WeatherWeeck/WeatherWeeck';
-import { getWeather, getWeatherWeek } from '../weatherAPI/weatherAPI';
+import { getWeather, getWeatherWeek } from '../API/weatherAPI';
 import { Container, Grid, Box } from '@mui/material';
 
 export const App = () => {

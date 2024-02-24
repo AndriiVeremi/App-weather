@@ -12,3 +12,6 @@ export const getWeather = async city => {
   const data = await axios(`weather?q=${city}&appid=${API_KEY}&units=metric`);
   return data;
 };
+
+
+

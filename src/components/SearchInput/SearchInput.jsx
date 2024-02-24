@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Button, TextField } from '@mui/material';
-import { SearchFormContainer, Forma } from './SearchInput.styled';
+import { SearchFormContainer, Forma, Button, Input } from './SearchInput.styled';
 
 export const SearchInput = ({ onSubmit }) => {
   const [searchCity, setSearchCity] = useState('');
@@ -24,15 +23,13 @@ export const SearchInput = ({ onSubmit }) => {
   return (
     <SearchFormContainer>
       <Forma onSubmit={handleSubmit}>
-      <Button type="submit" variant="outlined">
+      <Button type="submit">
           Search
         </Button>
-        <TextField
-          fullWidth
+        <Input
           value={searchCity}
           onChange={handleChange}
-          label="Weather in your city"
-          id="fullWidth"
+          placeholder="Weather in your city"
         />
       </Forma>
     </SearchFormContainer>

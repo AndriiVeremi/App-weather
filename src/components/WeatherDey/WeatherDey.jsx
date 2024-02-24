@@ -1,8 +1,9 @@
 import { format } from 'date-fns';
-import { List, ListItem } from '@mui/material';
+import { getWeatherMap } from 'API/weatherMapAPI';
 import {
   Wrapper,
   NameCity,
+  List,
   Items,
   FlexWrapper,
   Temp,
@@ -10,7 +11,8 @@ import {
   TempWrapper,
   OtherDesc,
   TextDesc,
-  Text
+  Text,
+  TextSpan,
 } from './WeatherDey.styled';
 
 import IconWind from '../../images/wind.png';
@@ -20,7 +22,9 @@ import sunDown from '../../images/sunDown.png';
 import temp from '../../images/temp.png';
 
 export const WeatherDey = ({ weathers }) => {
-  console.log('weathers', weathers);
+
+console.log(weathers)
+  
   const { name, main, weather, wind, sys } = weathers;
 
   return (
@@ -28,7 +32,6 @@ export const WeatherDey = ({ weathers }) => {
       <NameCity>{name}</NameCity>
 
       <TempWrapper>
-
         <TextDesc>{weather[0].description}</TextDesc>
         <img
           src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
@@ -40,67 +43,84 @@ export const WeatherDey = ({ weathers }) => {
           <Temp>{Math.round(main.temp)}°C</Temp>
           <TempFeel>Feels like: {Math.round(main.feels_like)} °C</TempFeel>
         </FlexWrapper>
-
       </TempWrapper>
 
       <OtherDesc>
-        <div>
-        <Items>
+        <List>
+          <Items>
             <img
               src={IconPressure}
-              style={{ height: '25px', width: '25px' }}
+              style={{ height: '30px', width: '30px' }}
               alt="Pressure"
             />
-            <Text>Pressure: {main.pressure}</Text>
+            <Text>
+              Pressure: <TextSpan>{main.pressure}</TextSpan>
+            </Text>
           </Items>
 
-        <Items>
-        <img
+          <Items>
+            <img
               src={temp}
-              style={{ height: '35px', width: '35px' }}
+              style={{ height: '40px', width: '40px' }}
               alt="temp"
             />
-          <Text>Temp Max: {Math.round(main.temp_max)} °C</Text>
-        </Items>
+            <Text>
+              Temp Max: <TextSpan>{Math.round(main.temp_max)} °C</TextSpan>
+            </Text>
+          </Items>
 
-        <Items>
-        <img
+          <Items>
+            <img
               src={temp}
-              style={{ height: '35px', width: '35px' }}
+              style={{ height: '40px', width: '40px' }}
               alt="temp"
             />
-        <Text>Temp Min: {Math.round(main.temp_min)} °C</Text>
-        </Items>
-          
-        </div>
+            <Text>
+              Temp Min: <TextSpan>{Math.round(main.temp_min)} °C</TextSpan>
+            </Text>
+          </Items>
 
-        <div>
-        <Items>
+          <Items>
             <img
               src={IconWind}
-              style={{ height: '35px', width: '35px' }}
+              style={{ height: '40px', width: '40px' }}
               alt="Wind"
             />
-            <Text>Wind speed: {wind.speed}</Text>
+            <Text>
+              Wind speed: <TextSpan>{wind.speed} m/s</TextSpan>
+            </Text>
           </Items>
 
           <Items>
             <img
               src={sunUp}
-              style={{ height: '35px', width: '35px' }}
+              style={{ height: '40px', width: '40px' }}
               alt="sunUp"
             />
-            <Text>Sunrise: {format(new Date(sys.sunrise * 1000), 'HH:mm')} </Text>
+            <Text>
+              Sunrise:{' '}
+              <TextSpan>
+                {format(new Date(sys.sunrise * 1000), 'HH:mm')}
+              </TextSpan>
+            </Text>
           </Items>
           <Items>
             <img
               src={sunDown}
-              style={{ height: '30px', width: '30px' }}
+              style={{ height: '40px', width: '40px' }}
               alt="sunDown"
             />
-            <Text>Sunset: {format(new Date(sys.sunset * 1000), 'HH:mm')} </Text>
+            <Text>
+              Sunset:{' '}
+              <TextSpan>
+                {format(new Date(sys.sunset * 1000), 'HH:mm')}
+              </TextSpan>
+            </Text>
           </Items>
-        </div>
+        </List>
+
+<div></div>
+
       </OtherDesc>
     </Wrapper>
   );

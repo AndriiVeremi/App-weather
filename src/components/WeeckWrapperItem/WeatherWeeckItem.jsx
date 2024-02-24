@@ -1,12 +1,14 @@
 import { format } from 'date-fns';
-import { WeeckItem, ItemImgWrapper } from './WeeckWrapperItem';
+import { WeeckItem, ItemImgWrapper, DataText, DataTextWrapper } from './WeeckWrapperItem';
 
 export const WeatherWeeckItem = ({ id, data, temp, wind, icon, desc }) => {
   return (
     <WeeckItem key={id}>
-      <div>
-        <p>{format(new Date(data), 'dd EEEE HH:mm')}</p>
-      </div>
+      <DataTextWrapper>
+        <DataText>{format(new Date(data), 'dd')}</DataText>
+        <DataText>{format(new Date(data), 'EEEE')}</DataText>
+        <DataText>{format(new Date(data), 'HH:mm')}</DataText>
+      </DataTextWrapper>
 
       <ItemImgWrapper>
         <img
@@ -18,8 +20,8 @@ export const WeatherWeeckItem = ({ id, data, temp, wind, icon, desc }) => {
       </ItemImgWrapper>
 
       <div>
-        <p>Temp: {Math.round(temp)} °C</p>
-        <p>Wind: {Math.round(wind)} m/s</p>
+        <DataText>Temp: {Math.round(temp)} °C</DataText>
+        <DataText>Wind: {Math.round(wind)} m/s</DataText>
       </div>
     </WeeckItem>
   );

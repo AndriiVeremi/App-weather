@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 
 export const Wrapper = styled.div`
  border: 1px solid #2293ee;
- height: 550px;
+ height: 600px;
  border-radius: 10px;
  padding: 30px;
  background-color: #beebff;
@@ -16,10 +16,21 @@ color: #163355;
 margin-bottom: 30px;
 `;
 
-export const Items = styled.div`
+export const List = styled.ul`
 display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-content: space-around;
 gap: 10px;
-margin-bottom: 20px;
+height: 250px;
+width: 100%;
+`;
+
+export const Items = styled.li`
+display: flex;
+height: 60px;
+gap: 10px;
+align-items: center;
 `;
 
 export const TempWrapper = styled.div`
@@ -69,7 +80,11 @@ color: #163355;
 export const Text = styled.p`
 font-family: 'Montserrat';
 margin: 0;
-font-size: 18px;
+font-size: 20px;
 color: #163355;
+`;
+
+export const TextSpan = styled.span`
+font-weight: 700;
 `;
 
