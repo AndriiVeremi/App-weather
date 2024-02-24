@@ -9,22 +9,26 @@ import {
   TempWrapper,
   OtherDesc,
   TextDesc,
+  Text
 } from './WeatherDey.styled';
 
 import IconWind from '../../images/wind.png';
 import IconPressure from '../../images/pressure.png';
-
+import sunUp from '../../images/sunUp.png';
+import sunDown from '../../images/sunDown.png';
+import temp from '../../images/temp.png';
 
 export const WeatherDey = ({ weathers }) => {
-  console.log('weathers', weathers)
+  console.log('weathers', weathers);
   const { name, main, weather, wind, sys } = weathers;
+
   return (
     <Wrapper>
       <NameCity>{name}</NameCity>
 
       <TempWrapper>
-        <TextDesc>{weather[0].description}</TextDesc>
 
+        <TextDesc>{weather[0].description}</TextDesc>
         <img
           src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
           style={{ height: '150px', width: '150px' }}
@@ -41,24 +45,62 @@ export const WeatherDey = ({ weathers }) => {
       <OtherDesc>
         <div>
           <Items>
-            <img src={IconPressure} style={{ height: '30px', width: '30px' }} alt="Pressure" />
-            <p>Pressure: {main.pressure}</p>
+            <img
+              src={IconPressure}
+              style={{ height: '25px', width: '25px' }}
+              alt="Pressure"
+            />
+            <Text>Pressure: {main.pressure}</Text>
           </Items>
 
           <Items>
-            <img src={IconWind} style={{ height: '30px', width: '30px' }} alt="Wind" />
-            <p>Wind speed: {wind.speed}</p>
+            <img
+              src={IconWind}
+              style={{ height: '30px', width: '30px' }}
+              alt="Wind"
+            />
+            <Text>Wind speed: {wind.speed}</Text>
           </Items>
         </div>
 
         <div>
-          <p>Теспература Max: {Math.round(main.temp_max)} °C</p>
-          <p>Теспература Min: {Math.round(main.temp_min)} °C</p>
+        <Items>
+        <img
+              src={temp}
+              style={{ height: '30px', width: '30px' }}
+              alt="temp"
+            />
+          <Text>Temp Max: {Math.round(main.temp_max)} °C</Text>
+        </Items>
+
+        <Items>
+        <img
+              src={temp}
+              style={{ height: '30px', width: '30px' }}
+              alt="temp"
+            />
+        <Text>Temp Min: {Math.round(main.temp_min)} °C</Text>
+        </Items>
+          
         </div>
 
         <div>
-          <p>Sunrise: {format(new Date(sys.sunrise * 1000), 'HH:mm')} </p>
-          <p>Sunset: {format(new Date(sys.sunset * 1000), 'HH:mm')} </p>
+          <Items>
+            <img
+              src={sunUp}
+              style={{ height: '30px', width: '30px' }}
+              alt="sunUp"
+            />
+            <Text>Sunrise: {format(new Date(sys.sunrise * 1000), 'HH:mm')} </Text>
+          </Items>
+          <Items>
+            <img
+              src={sunDown}
+              style={{ height: '30px', width: '30px' }}
+              alt="sunDown"
+            />
+            <Text>Sunset: {format(new Date(sys.sunset * 1000), 'HH:mm')} </Text>
+          </Items>
         </div>
       </OtherDesc>
     </Wrapper>

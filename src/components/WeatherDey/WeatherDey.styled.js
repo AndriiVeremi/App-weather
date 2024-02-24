@@ -27,7 +27,7 @@ gap: 30px;
 align-items: center;
 margin-bottom: 30px;
 justify-content: flex-end;
-margin-bottom: 40px;
+margin-bottom: 60px;
 `;
 
 export const FlexWrapper = styled.div`
@@ -52,14 +52,23 @@ color: #163355;
 `;
 
 export const OtherDesc = styled.div`
+border-top: 1px solid #333;
 display: flex;
 gap: 30px;
+padding-top: 30px;
 `;
 
 export const TextDesc = styled.div`
 font-family: 'Montserrat';
 margin: 0;
 font-size: 30px;
+color: #163355;
+`;
+
+export const Text = styled.p`
+font-family: 'Montserrat';
+margin: 0;
+font-size: 18px;
 color: #163355;
 `;
 
