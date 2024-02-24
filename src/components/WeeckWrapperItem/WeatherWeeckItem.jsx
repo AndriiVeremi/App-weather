@@ -4,10 +4,6 @@ import { WeeckItem } from './WeeckWrapperItem';
 export const WeatherWeeckItem = ({ item }) => {
   console.log('item', item);
 
-  //   const date2 = format(new Date(item.dt), "MM:dd:yyyy");
-  //  const asd = format(new Date(item.dt), "MM/dd/yyyy");
-  //   console.log(date2)
-
   return (
     
       <WeeckItem>
