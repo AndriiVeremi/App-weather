@@ -2,7 +2,7 @@ import { format } from 'date-fns';
 import { WeeckItem } from './WeeckWrapperItem';
 
 export const WeatherWeeckItem = ({ item }) => {
-  console.log('item', item);
+  // console.log('item', item);
 
   return (
     

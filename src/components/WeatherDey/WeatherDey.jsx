@@ -15,12 +15,10 @@ import IconWind from '../../images/wind.png';
 import IconPressure from '../../images/pressure.png';
 
 export const WeatherDey = ({ weathers }) => {
-  const { city, list } = weathers;
-  const { main, weather, wind } = list[0];
-
+  const { name, main, weather, wind } = weathers;
   return (
     <Wrapper>
-      <NameCity>{city.name}</NameCity>
+      <NameCity>{name}</NameCity>
       <TempWrapper>
 
         <TextWrapper>
