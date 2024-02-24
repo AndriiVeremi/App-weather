@@ -1,20 +1,23 @@
-// import { WeeckWrapper } from './WeatherWeeck.styled';
-import { WeatherWeeckItem } from "components/WeeckWrapperItem/WeatherWeeckItem";
+import { WeatherWeeckItem } from 'components/WeeckWrapperItem/WeatherWeeckItem';
+import { WeathersListWrappre, WeathersList } from './WeatherWeeck.styled';
 
 export const WeatherWeeck = ({ weathers }) => {
-  const { list } = weathers;
-  console.log('list', list);
   return (
-    <ul>
-
-      {list &&
-        list.map(item => 
+    <WeathersListWrappre>
+      <WeathersList>
+      {weathers &&
+        weathers.map(item => {   
+          return (
             <WeatherWeeckItem
-              key={item.main.dt}
-              item={item}
+              id={item.dt}
+              data={item.dt_txt}
+              temp={item.main.temp}
+              wind={item.wind.speed}
+              icon={item.weather[0].icon}
             />
-          )
-        }
-    </ul>
+          );
+        })}
+    </WeathersList>
+    </WeathersListWrappre>
   );
 };

@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://api.openweathermap.org/data/2.5/';
 const API_KEY = '4cdf01687d5c8290754edb7cd57c1861';
 
 export const getWeatherWeek = async city => {
-  const data = await axios(`forecast?q=${city}&appid=${API_KEY}&units=metric`);
+  const data = await axios(`forecast?q=${city}&appid=${API_KEY}&cnt=10&units=metric`);
 
   return data;
 };

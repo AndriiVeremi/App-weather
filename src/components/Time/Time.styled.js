@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   padding: 50px;
   background-color: #91dfff;
+  margin-bottom: 20px;
 `;
 
 export const Times = styled.span`

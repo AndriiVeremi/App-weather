@@ -1,22 +1,19 @@
 import { format } from 'date-fns';
 import { WeeckItem } from './WeeckWrapperItem';
 
-export const WeatherWeeckItem = ({ item }) => {
-  // console.log('item', item);
-
+export const WeatherWeeckItem = ({ id, data, temp, wind, icon }) => {
   return (
-    
-      <WeeckItem>
-        <img
-          src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
-          style={{ height: '50px', width: '50px' }}
-          alt="icon"
-        />
-        <div>
-        <p>{format(new Date(item.dt_txt), 'MM EEEE hh:mm')}</p>
-        <p>Temp: {Math.round(item.main.temp)} °C</p>
-        </div>
-      </WeeckItem>
-   
+    <WeeckItem key={id}>
+      <img
+        src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+        style={{ height: '50px', width: '50px' }}
+        alt="icon"
+      />
+      <div>
+        <p>{format(new Date(data), 'dd EEEE hh:mm')}</p>
+        <p>Temp: {Math.round(temp)} °C</p>
+        <p>Wind: {Math.round(wind)} m/s</p>
+      </div>
+    </WeeckItem>
   );
 };

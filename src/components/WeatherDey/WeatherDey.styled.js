@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 
 export const Wrapper = styled.div`
  border: 1px solid #2293ee;
+ height: 500px;
  border-radius: 10px;
  padding: 50px;
  background-color: #beebff;
