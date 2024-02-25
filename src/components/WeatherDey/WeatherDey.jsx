@@ -1,5 +1,4 @@
 import { format } from 'date-fns';
-import { getWeatherMap } from 'API/weatherMapAPI';
 import {
   Wrapper,
   NameCity,
@@ -23,8 +22,6 @@ import temp from '../../images/temp.png';
 
 export const WeatherDey = ({ weathers }) => {
 
-console.log(weathers)
-  
   const { name, main, weather, wind, sys } = weathers;
 
   return (
@@ -118,8 +115,6 @@ console.log(weathers)
             </Text>
           </Items>
         </List>
-
-<div></div>
 
       </OtherDesc>
     </Wrapper>

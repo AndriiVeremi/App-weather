@@ -26,7 +26,7 @@ display: flex;
 flex-direction: column;
 `;
 
-export const DataTextWrapper = styled.p`
+export const DataTextWrapper = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
