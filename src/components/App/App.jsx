@@ -1,15 +1,14 @@
 import { useEffect, useState } from 'react';
-import { BackgroundApp } from './Background/Background';
-import { Navbar } from './Navbar/Navbar';
-import { Time } from './Time/Time';
-import { WeatherDey } from './WeatherDey/WeatherDey';
-import { WeatherWeeck } from './WeatherWeeck/WeatherWeeck';
-import { getWeather, getWeatherWeek } from '../API/weatherAPI';
+import { BackgroundApp } from '../Background/Background';
+import { Navbar } from '../Navbar/Navbar';
+import { Time } from '../Time/Time';
+import { WeatherDey } from '../WeatherDey/WeatherDey';
+import { WeatherWeeck } from '../WeatherWeeck/WeatherWeeck';
+import { getWeather, getWeatherWeek } from '../../API/weatherAPI';
 import { getCollectionImg } from 'API/pixabayAPI';
-import { Container, Grid, Box } from '@mui/material';
+import { Container, Wrapper, InfoWrapper } from './App.styled';
 
 export const App = () => {
-
   const [city, setCity] = useState(localStorage.getItem('Weather') || 'Kyiv');
   const [weather, setWeather] = useState([]);
   const [weatherWeek, setWeatherWeek] = useState([]);
@@ -17,7 +16,6 @@ export const App = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-
     if (city === '') {
       return;
     }
@@ -47,27 +45,19 @@ export const App = () => {
 
   return (
     <Container>
-      <BackgroundApp background={background}/> 
+      <BackgroundApp background={background} />
       <Navbar onSubmit={onSubmit} />
-      <Grid container spacing={2}>
-        <Grid item xs={5}>
-          <Box>
-            <Time />
-          </Box>
-          <Box>
-            {weather.length !== 0 && !error && (
-              <WeatherWeeck weathers={weatherWeek} />
-            )}
-          </Box>
-        </Grid>
-        <Grid item xs={7}>
-          <Box>
-            {weather.length !== 0 && !error && (
-              <WeatherDey weathers={weather} />
-            )}
-          </Box>
-        </Grid>
-      </Grid>
+      <Wrapper>
+        <InfoWrapper>
+          <Time />
+
+          {weather.length !== 0 && !error && (
+            <WeatherWeeck weathers={weatherWeek} />
+          )}
+        </InfoWrapper>
+
+        {weather.length !== 0 && !error && <WeatherDey weathers={weather} />}
+      </Wrapper>
     </Container>
   );
 };

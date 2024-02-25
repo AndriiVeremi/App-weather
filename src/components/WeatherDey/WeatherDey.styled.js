@@ -1,11 +1,12 @@
 import styled from '@emotion/styled'
 
 export const Wrapper = styled.div`
- border: 1px solid #2293ee;
+width: 100%;
+ border: none;
  height: 600px;
  border-radius: 10px;
  padding: 30px;
- background-color: #beebff;
+ background-color: rgba(255, 255, 255, 0.6);
 `;
 
 export const NameCity = styled.h1`

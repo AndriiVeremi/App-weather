@@ -6,7 +6,7 @@ export const WeeckItem = styled.li`
   align-items: center;
   border: 1px solid #333;
   border-radius: 10px;
-  background-color: #2293ee;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 10px;
   &:hover {
     scale: 0.97;
