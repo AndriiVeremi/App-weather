@@ -1,12 +1,14 @@
 import styled from '@emotion/styled'
 
 export const Wrapper = styled.div`
-width: 100%;
  border: none;
- height: 600px;
  border-radius: 10px;
  padding: 30px;
  background-color: rgba(255, 255, 255, 0.7);
+ @media screen and (min-width: 1280px) { 
+    height: 600px;
+    width: 100%;
+}
 `;
 
 export const NameCity = styled.h1`
