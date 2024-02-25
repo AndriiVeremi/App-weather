@@ -25,10 +25,14 @@ font-family: 'Montserrat';
 export const Input = styled.input`
 font-family: 'Montserrat';
   height: 50px;
-  width: 350px;
+  width: 200px;
   border: 1px solid #184f8c;
   border-radius: 10px;
   padding: 0px 15px;
   font-size: 24px;
   color: #184f8c;
+
+  @media screen and (min-width: 768px) {
+    width: 350px;
+}
 `;

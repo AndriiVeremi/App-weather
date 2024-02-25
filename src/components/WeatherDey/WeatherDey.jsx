@@ -43,6 +43,7 @@ export const WeatherDey = ({ weathers }) => {
       </TempWrapper>
 
       <OtherDesc>
+        
         <List>
           <Items>
             <img
