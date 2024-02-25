@@ -6,7 +6,7 @@ width: 100%;
  height: 600px;
  border-radius: 10px;
  padding: 30px;
- background-color: rgba(255, 255, 255, 0.6);
+ background-color: rgba(255, 255, 255, 0.7);
 `;
 
 export const NameCity = styled.h1`
