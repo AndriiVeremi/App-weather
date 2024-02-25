@@ -14,5 +14,5 @@ gap: 30px;
 `;
 
 export const InfoWrapper = styled.div`
-width: 600px;
+width: 650px;
 `;

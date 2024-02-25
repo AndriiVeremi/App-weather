@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 
 export const Button = styled.button`
-padding: 10px;
+padding: 15px;
 color: #fff;
-background-color: #61a146;
+background: linear-gradient(133deg, #1c63ad, #184474 );
 border-radius: 10px;
 font-family: 'Montserrat';
 font-size: 16px;
 &:hover {
-    background-color: #3d692c;
+    background: linear-gradient(133deg, #529bde, #1c63ad );
 }
 `;
 

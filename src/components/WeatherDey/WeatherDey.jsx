@@ -47,7 +47,7 @@ export const WeatherDey = ({ weathers }) => {
           <Items>
             <img
               src={IconPressure}
-              style={{ height: '30px', width: '30px' }}
+              style={{ height: '40px', width: '40px' }}
               alt="Pressure"
             />
             <Text>
@@ -58,7 +58,7 @@ export const WeatherDey = ({ weathers }) => {
           <Items>
             <img
               src={temp}
-              style={{ height: '40px', width: '40px' }}
+              style={{ height: '55px', width: '55px' }}
               alt="temp"
             />
             <Text>
@@ -69,7 +69,7 @@ export const WeatherDey = ({ weathers }) => {
           <Items>
             <img
               src={temp}
-              style={{ height: '40px', width: '40px' }}
+              style={{ height: '55px', width: '55px' }}
               alt="temp"
             />
             <Text>
@@ -80,7 +80,7 @@ export const WeatherDey = ({ weathers }) => {
           <Items>
             <img
               src={IconWind}
-              style={{ height: '40px', width: '40px' }}
+              style={{ height: '55px', width: '55px' }}
               alt="Wind"
             />
             <Text>
@@ -91,7 +91,7 @@ export const WeatherDey = ({ weathers }) => {
           <Items>
             <img
               src={sunUp}
-              style={{ height: '40px', width: '40px' }}
+              style={{ height: '55px', width: '55px' }}
               alt="sunUp"
             />
             <Text>
@@ -104,7 +104,7 @@ export const WeatherDey = ({ weathers }) => {
           <Items>
             <img
               src={sunDown}
-              style={{ height: '40px', width: '40px' }}
+              style={{ height: '55px', width: '55px' }}
               alt="sunDown"
             />
             <Text>

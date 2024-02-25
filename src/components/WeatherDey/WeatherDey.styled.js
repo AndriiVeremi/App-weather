@@ -81,11 +81,12 @@ color: #163355;
 export const Text = styled.p`
 font-family: 'Montserrat';
 margin: 0;
-font-size: 20px;
+font-size: 22px;
 color: #163355;
 `;
 
 export const TextSpan = styled.span`
 font-weight: 700;
+font-size: 28px;
 `;
 

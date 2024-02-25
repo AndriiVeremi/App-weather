@@ -9,20 +9,20 @@ export const Forma = styled.form`
 `;
 
 export const Button = styled.button`
-  padding: 10px;
-  color: #3d692c;
-  border: 1px solid #3d692c;
+  padding: 15px;
+  color: #184f8c;
+  border: 1px solid #184f8c;
   background-color: #fff;
   border-radius: 10px;
   font-family: 'Montserrat';
   font-size: 16px;
   &:hover {
-    background-color: #e9f5e3;
+    background-color: #e4edfa;
   }
 `;
 
 export const Input = styled.input`
-  height: 40px;
+  height: 50px;
   width: 350px;
   border: 1px solid #3d692c;
   border-radius: 10px;
