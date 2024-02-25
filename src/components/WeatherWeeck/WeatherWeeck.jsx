@@ -7,7 +7,6 @@ export const WeatherWeeck = ({ weathers }) => {
       <WeathersList>
         {weathers &&
           weathers.map(item => {
-            // console.log(item)
             return (
               <WeatherWeeckItem
                 key={item.dt}

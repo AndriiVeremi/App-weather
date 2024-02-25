@@ -1,9 +1,13 @@
 import styled from '@emotion/styled';
 
 export const WeathersListWrapper = styled.div`
-  height: 470px;
+  height: 660px;
   overflow-x: hidden;
   overflow-y: scroll;
+
+  @media screen and (min-width: 1280px) {    
+    height: 470px;
+}
 
   &::-webkit-scrollbar {
     width: 5px;
