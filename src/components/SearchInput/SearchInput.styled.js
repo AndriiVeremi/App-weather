@@ -9,6 +9,7 @@ export const Forma = styled.form`
 `;
 
 export const Button = styled.button`
+font-family: 'Montserrat';
   padding: 15px;
   color: #184f8c;
   border: 1px solid #184f8c;
@@ -22,11 +23,12 @@ export const Button = styled.button`
 `;
 
 export const Input = styled.input`
+font-family: 'Montserrat';
   height: 50px;
   width: 350px;
   border: 1px solid #184f8c;
   border-radius: 10px;
   padding: 0px 15px;
-  font-size: 16px;
-  
+  font-size: 24px;
+  color: #184f8c;
 `;
