@@ -31,3 +31,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 `;
+
+export const TempText = styled.p`
+font-family: 'Montserrat';
+font-size: 18px;
+display: flex;
+gap: 10px;
+`;
+
+export const ColorText = styled.span`
+font-family: 'Montserrat';
+font-size: 18px;
+color: #163355;
+font-weight: 700;
+`;

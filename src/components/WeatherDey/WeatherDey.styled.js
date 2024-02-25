@@ -82,11 +82,13 @@ export const Text = styled.p`
 font-family: 'Montserrat';
 margin: 0;
 font-size: 22px;
-color: #163355;
+color: #333;
+font-weight: 500;
 `;
 
 export const TextSpan = styled.span`
 font-weight: 700;
 font-size: 28px;
+color: #163355;
 `;
 

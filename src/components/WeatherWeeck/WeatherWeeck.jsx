@@ -1,4 +1,4 @@
-import { WeatherWeeckItem } from 'components/WeeckWrapperItem/WeatherWeeckItem';
+import { WeatherWeeckItem } from 'components/WeatherWeeckItem/WeatherWeeckItem';
 import { WeathersListWrapper, WeathersList } from './WeatherWeeck.styled';
 
 export const WeatherWeeck = ({ weathers }) => {
