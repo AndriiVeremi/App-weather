@@ -14,34 +14,63 @@ export const WeeckItem = styled.li`
 `;
 
 export const ItemImgWrapper = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const DataText = styled.p`
-font-family: 'Montserrat';
-font-size: 18px;
-display: flex;
-flex-direction: column;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const DataTextWrapper = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const TempText = styled.p`
-font-family: 'Montserrat';
-font-size: 18px;
-display: flex;
-gap: 10px;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  display: flex;
+  gap: 10px;
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+  }
 `;
 
 export const ColorText = styled.span`
-font-family: 'Montserrat';
-font-size: 18px;
-color: #163355;
-font-weight: 700;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  color: #163355;
+  font-weight: 700;
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+  }
+`;
+
+export const DascriptionText = styled.span`
+  font-family: 'Montserrat';
+  font-size: 16px;
+  color: #163355;
+  font-weight: 700;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+  }
 `;

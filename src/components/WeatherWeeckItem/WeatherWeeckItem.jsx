@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { WeeckItem, ItemImgWrapper, DataText, DataTextWrapper, TempText, ColorText } from './WeatherWeeckItem.styled';
+import { WeeckItem, ItemImgWrapper, DataText, DataTextWrapper, TempText, ColorText, DascriptionText } from './WeatherWeeckItem.styled';
 
 export const WeatherWeeckItem = ({ id, data, temp, wind, icon, desc }) => {
   return (
@@ -16,7 +16,7 @@ export const WeatherWeeckItem = ({ id, data, temp, wind, icon, desc }) => {
           style={{ height: '70px', width: '70px' }}
           alt="icon"
         />
-        <span>{desc}</span>
+        <DascriptionText>{desc}</DascriptionText>
       </ItemImgWrapper>
 
       <div>

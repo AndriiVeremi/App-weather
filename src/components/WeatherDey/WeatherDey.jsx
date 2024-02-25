@@ -21,7 +21,6 @@ import sunDown from '../../images/sunDown.png';
 import temp from '../../images/temp.png';
 
 export const WeatherDey = ({ weathers }) => {
-
   const { name, main, weather, wind, sys } = weathers;
 
   return (
@@ -43,19 +42,7 @@ export const WeatherDey = ({ weathers }) => {
       </TempWrapper>
 
       <OtherDesc>
-        
         <List>
-          <Items>
-            <img
-              src={IconPressure}
-              style={{ height: '40px', width: '40px' }}
-              alt="Pressure"
-            />
-            <Text>
-              Pressure: <TextSpan>{main.pressure}</TextSpan>
-            </Text>
-          </Items>
-
           <Items>
             <img
               src={temp}
@@ -75,6 +62,17 @@ export const WeatherDey = ({ weathers }) => {
             />
             <Text>
               Temp Min: <TextSpan>{Math.round(main.temp_min)} °C</TextSpan>
+            </Text>
+          </Items>
+
+          <Items>
+            <img
+              src={IconPressure}
+              style={{ height: '45px', width: '45px' }}
+              alt="Pressure"
+            />
+            <Text>
+              Pressure: <TextSpan>{main.pressure}</TextSpan>
             </Text>
           </Items>
 
@@ -116,7 +114,6 @@ export const WeatherDey = ({ weathers }) => {
             </Text>
           </Items>
         </List>
-
       </OtherDesc>
     </Wrapper>
   );
