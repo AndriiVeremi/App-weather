@@ -16,7 +16,6 @@ export const App = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-
     if (city.length === 0) {
       return;
     }
@@ -47,12 +46,15 @@ export const App = () => {
   return (
     <Container>
       <BackgroundApp background={background} />
-      <Navbar onSubmit={onSubmit}/>
+      <Navbar onSubmit={onSubmit} />
       <Wrapper>
-        <InfoWrapper>
-          <Time />
+        
+        {error && <h1>error</h1>}
 
-          {weather.length !== 0 && !error && (
+        <InfoWrapper>
+          {weatherWeek.length !== 0 && !error && <Time />}
+
+          {weatherWeek.length !== 0 && !error && (
             <WeatherWeeck weathers={weatherWeek} />
           )}
         </InfoWrapper>
