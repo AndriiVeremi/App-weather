@@ -6,5 +6,7 @@ export const BackgroundApp = ({ background }) => {
   if (background.length !== 0) {
     rootBg.style.backgroundImage = `url(${background[numImages].largeImageURL})`;
     rootBg.style.backgroundSize = 'cover';
+    rootBg.style.backgroundRepeat = 'no-repeat';
+    rootBg.style.backgroundAttachment = 'fixed' 
   }
 };

@@ -10,7 +10,6 @@ import { Container, Wrapper, InfoWrapper } from './App.styled';
 
 export const App = () => {
   const [city, setCity] = useState(localStorage.getItem('Weather') || 'kyiv');
-  const [location, setLocation] = useState([]);
   const [weather, setWeather] = useState([]);
   const [weatherWeek, setWeatherWeek] = useState([]);
   const [background, setBackground] = useState([]);
@@ -19,18 +18,18 @@ export const App = () => {
   useEffect(() => {
 
     if (city.length === 0) {
-      return ;
+      return;
     }
 
     const handleSearchWeather = async () => {
       try {
         setError(null);
-        const data = await getWeather(city);
-        const data2 = await getWeatherWeek(city);
-        const data3 = await getCollectionImg(city);
-        setWeather(data.data);
-        setWeatherWeek(data2.data.list);
-        setBackground(data3.data.hits);
+        const weather = await getWeather(city);
+        const weatherWeek = await getWeatherWeek(city);
+        const collectionImg = await getCollectionImg(city);
+        setWeather(weather.data);
+        setWeatherWeek(weatherWeek.data.list);
+        setBackground(collectionImg.data.hits);
       } catch (error) {
         console.log(error);
         setError(error);
@@ -45,14 +44,10 @@ export const App = () => {
     localStorage.setItem('Weather', city);
   };
 
-  const onLocation = (lat, lon) => {
-    console.log(lat, lon);
-  };
-
   return (
     <Container>
       <BackgroundApp background={background} />
-      <Navbar onSubmit={onSubmit} onLocation={onLocation} />
+      <Navbar onSubmit={onSubmit}/>
       <Wrapper>
         <InfoWrapper>
           <Time />

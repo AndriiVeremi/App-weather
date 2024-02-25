@@ -1,10 +1,10 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const NavWrapper = styled.div`
   display: flex;
   align-items: center;
   margin: 0 auto;
-width: 670px;
+  width: 530px;
   gap: 30px;
   justify-content: center;
   border: none;
@@ -12,4 +12,5 @@ width: 670px;
   background-color: rgba(255, 255, 255, 0.6);
   margin-bottom: 30px;
   padding: 20px;
+  /* background-size: contain; */
 `;

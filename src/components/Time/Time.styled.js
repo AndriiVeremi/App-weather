@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Wrapper = styled.div`
+ font-family: 'Montserrat';
   border: none;
   border-radius: 10px;
   display: flex;
@@ -13,12 +14,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Times = styled.span`
-  font-family: 'Montserrat';
-  font-size: 35px;
-
+  font-size: 40px;
 `;
 
 export const Dates = styled.span`
-  font-family: 'Montserrat';
+ font-weight: 700;
   font-size: 50px;
+  font-style: italic;
 `;
