@@ -6,7 +6,7 @@ import { WeatherDey } from '../WeatherDey/WeatherDey';
 import { WeatherWeeck } from '../WeatherWeeck/WeatherWeeck';
 import { getWeather, getWeatherWeek } from '../../API/weatherAPI';
 import { getCollectionImg } from 'API/pixabayAPI';
-import { Container, Wrapper, InfoWrapper } from './App.styled';
+import { Container, Wrapper, InfoWrapper, Error } from './App.styled';
 
 export const App = () => {
   const [city, setCity] = useState(localStorage.getItem('Weather') || 'kyiv');
@@ -16,6 +16,7 @@ export const App = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    
     if (city.length === 0) {
       return;
     }
@@ -29,8 +30,9 @@ export const App = () => {
         setWeather(weather.data);
         setWeatherWeek(weatherWeek.data.list);
         setBackground(collectionImg.data.hits);
+        localStorage.setItem('Weather', city);
       } catch (error) {
-        console.log(error);
+        console.log('error', error.message);
         setError(error);
       }
     };
@@ -40,17 +42,16 @@ export const App = () => {
 
   const onSubmit = city => {
     setCity(city);
-    localStorage.setItem('Weather', city);
   };
 
   return (
     <Container>
       <BackgroundApp background={background} />
       <Navbar onSubmit={onSubmit} />
-      <Wrapper>
-        
-        {error && <h1>error</h1>}
 
+      {error && <Error>City not found</Error>}
+
+      <Wrapper>
         <InfoWrapper>
           {weatherWeek.length !== 0 && !error && <Time />}
 

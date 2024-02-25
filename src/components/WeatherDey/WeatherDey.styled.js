@@ -3,11 +3,15 @@ import styled from '@emotion/styled';
 export const Wrapper = styled.div`
   border: none;
   height: 980px;
+  
   border-radius: 10px;
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.7);
   @media screen and (min-width: 768px) {
     height: 600px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 700px;
   }
 `;
 

@@ -16,7 +16,7 @@ export const Container = styled.div`
 
   @media screen and (min-width: 1280px) {
     width: 1280px;
-    padding: 60px 64px 0px 64px;
+    padding: 60px 65px 0px 65px;
   }
 `;
 
@@ -32,6 +32,17 @@ export const Wrapper = styled.div`
 
 export const InfoWrapper = styled.div`
   @media screen and (min-width: 1280px) {
-    width: 650px;
+    /* width: 650px; */
+    width: 450px;
   }
+`;
+
+export const Error = styled.span`
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  padding: 200px 0px;
+  border-radius: 10px;
+  color: #184474;
 `;
