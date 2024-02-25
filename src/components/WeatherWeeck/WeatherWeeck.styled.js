@@ -5,6 +5,10 @@ export const WeathersListWrapper = styled.div`
   overflow-x: hidden;
   overflow-y: scroll;
 
+  @media screen and (min-width: 768px) {
+    height: 500px;
+}
+
   @media screen and (min-width: 1280px) {    
     height: 470px;
 }
