@@ -10,10 +10,13 @@ export const SearchInput = ({ onSubmit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (searchCity !== '') {
-      onSubmit(searchCity);
-      resetInput();
+
+    if (searchCity === '') {
+      return alert('Ooops...')
     }
+    
+    onSubmit(searchCity);
+    resetInput();
   };
 
   const resetInput = () => {

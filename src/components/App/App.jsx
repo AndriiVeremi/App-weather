@@ -9,15 +9,17 @@ import { getCollectionImg } from 'API/pixabayAPI';
 import { Container, Wrapper, InfoWrapper } from './App.styled';
 
 export const App = () => {
-  const [city, setCity] = useState(localStorage.getItem('Weather') || 'Kyiv');
+  const [city, setCity] = useState(localStorage.getItem('Weather') || 'kyiv');
+  const [location, setLocation] = useState([]);
   const [weather, setWeather] = useState([]);
   const [weatherWeek, setWeatherWeek] = useState([]);
   const [background, setBackground] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (city === '') {
-      return;
+
+    if (city.length === 0) {
+      return ;
     }
 
     const handleSearchWeather = async () => {
@@ -43,10 +45,14 @@ export const App = () => {
     localStorage.setItem('Weather', city);
   };
 
+  const onLocation = (lat, lon) => {
+    console.log(lat, lon);
+  };
+
   return (
     <Container>
       <BackgroundApp background={background} />
-      <Navbar onSubmit={onSubmit} />
+      <Navbar onSubmit={onSubmit} onLocation={onLocation} />
       <Wrapper>
         <InfoWrapper>
           <Time />

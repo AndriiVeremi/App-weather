@@ -3,7 +3,8 @@ import styled from '@emotion/styled'
 export const NavWrapper = styled.div`
   display: flex;
   align-items: center;
-
+  margin: 0 auto;
+width: 670px;
   gap: 30px;
   justify-content: center;
   border: none;

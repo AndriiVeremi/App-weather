@@ -4,7 +4,7 @@ export const WeeckItem = styled.li`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #333;
+  border: none;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 10px;
