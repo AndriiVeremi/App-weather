@@ -45,8 +45,11 @@ export const App = () => {
   };
 
   return (
+
     <Container>
-      <BackgroundApp background={background} />
+
+     { background && <BackgroundApp background={background} />}
+     
       <Navbar onSubmit={onSubmit} />
 
       {error && <Error>City not found</Error>}

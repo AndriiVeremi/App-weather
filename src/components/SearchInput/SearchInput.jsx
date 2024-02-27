@@ -5,7 +5,7 @@ export const SearchInput = ({ onSubmit }) => {
   const [searchCity, setSearchCity] = useState('');
 
   const handleChange = e => {
-    setSearchCity(e.target.value);
+    setSearchCity(e.target.value.trim().toLowerCase());
   };
 
   const handleSubmit = e => {
